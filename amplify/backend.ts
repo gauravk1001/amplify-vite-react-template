@@ -2,15 +2,7 @@ import { defineBackend } from '@aws-amplify/backend';
 import { auth } from './auth/resource';
 import { data } from './data/resource';
 
-const backend = defineBackend({
+defineBackend({
   auth,
   data,
 });
-
-const { cfnUserPool } = backend.auth.resources.cfnResources
-
-cfnUserPool.usernameAttributes = []
-
-const { groups } = backend.auth.resources
-
-console.log(JSON.stringify(groups["ADMINS"].role));
