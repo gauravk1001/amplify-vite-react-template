@@ -7,7 +7,7 @@ import { defineAuth, secret } from '@aws-amplify/backend';
 export const auth = defineAuth({
   loginWith: {
     email: true,
-    externalProviders: {
+    /*externalProviders: {
       google: {
         clientId: secret('GOOGLE_CLIENT_ID'),
         clientSecret: secret('GOOGLE_CLIENT_SECRET'),
@@ -20,7 +20,7 @@ export const auth = defineAuth({
         'http://https://main.d2sb99nh81v1rc.amplifyapp.com/profile',
       ],
       logoutUrls: ['https://main.d2sb99nh81v1rc.amplifyapp.com/'],
-    },
+    },*/
   },
   groups: ["ADMINS", "EDITORS"],
   multifactor: {
