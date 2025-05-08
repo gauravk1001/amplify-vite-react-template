@@ -69,7 +69,6 @@ function App() {
   return (
     <Authenticator>
       {({ signOut, user }) => (
-        
         <main>
           <h1>Hello {user?.username}</h1>
           <h1>{user?.signInDetails?.loginId}'s todos</h1>

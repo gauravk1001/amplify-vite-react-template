@@ -12,7 +12,8 @@ const schema = a.schema({
       content: a.string(),
     })
     .authorization((allow) => [
-      allow.groups(["EDITORS"]).to(["read", "update"])
+      allow.groups(["EDITORS"]).to(["read", "update", "create"]),
+      allow.groups(["ADMINS"]).to(["read", "update", "create", "delete"]),
     ]),
 });
 
